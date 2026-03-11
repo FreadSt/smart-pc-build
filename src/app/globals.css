@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* ======================================
+   BASE THEME (LIGHT)
+====================================== */
+
+:root {
+
+    /* Backgrounds */
+    --background: #F8FAFC;
+    --card: #FFFFFF;
+
+    /* Text */
+    --foreground: #0F172A;
+    --text-secondary: #64748B;
+
+    /* Primary */
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+
+    /* Accent */
+    --accent: #7C3AED;
+
+    /* Status */
+    --success: #10B981;
+    --warning: #F59E0B;
+
+    /* Borders */
+    --border: #E2E8F0;
+
+    /* Fonts */
+    --font-sans: var(--font-manrope-sans);
+    --font-mono: var(--font-manrope-mono);
+}
+
+/* ======================================
+   TAILWIND THEME TOKENS
+====================================== */
+
+@theme inline {
+
+    --color-background: var(--background);
+    --color-card: var(--card);
+
+    --color-foreground: var(--foreground);
+    --color-text-secondary: var(--text-secondary);
+
+    --color-primary: var(--primary);
+    --color-primary-hover: var(--primary-hover);
+
+    --color-accent: var(--accent);
+
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+
+    --color-border: var(--border);
+
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-mono);
+}
+
+/* ======================================
+   DARK MODE
+====================================== */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+
+        --background: #020617;
+        --card: #0F172A;
+
+        --foreground: #F8FAFC;
+        --text-secondary: #94A3B8;
+
+        --primary: #3B82F6;
+        --primary-hover: #60A5FA;
+
+        --accent: #8B5CF6;
+
+        --success: #34D399;
+        --warning: #FBBF24;
+
+        --border: #1E293B;
+
+    }
+}
+
+/* ======================================
+   GLOBAL STYLES
+====================================== */
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Cards */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+/* Buttons */
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+/* Price highlight */
+
+.price {
+    color: var(--success);
+    font-weight: 600;
+}
