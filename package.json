@@ -1,32 +1,17 @@
 {
-  "name": "smart-pc-build",
-  "version": "0.1.0",
+  "name": "smart-pc-build-root",
   "private": true,
+  "workspaces": [
+    "client",
+    "scraper"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "@supabase/ssr": "^0.9.0",
-    "@supabase/supabase-js": "^2.99.1",
-    "clsx": "^2.1.1",
-    "lucide": "^0.577.0",
-    "next": "16.1.6",
-    "postcss": "^8.5.8",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "tailwind-merge": "^3.5.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.1",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4.2.1",
-    "typescript": "^5"
+    "dev": "npm run dev --workspace client",
+    "build": "npm run build --workspace client",
+    "start": "npm run start --workspace client",
+    "lint": "npm run lint --workspace client",
+    "dev:scraper": "npm run dev --workspace scraper",
+    "build:scraper": "npm run build --workspace scraper",
+    "start:scraper": "npm run start --workspace scraper"
   }
 }

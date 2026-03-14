@@ -1,4 +1,4 @@
-import { BuilderPage } from "@/pages/builder";
+import { BuilderPage } from "@/app/builder/ui";
 
 export default function Home() {
   return <BuilderPage />;
