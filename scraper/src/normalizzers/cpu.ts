@@ -1,23 +1,35 @@
-export function normalizeCPU(title: string) {
-    const t = title.toUpperCase();
+import type { Specs } from '../types/product';
 
-    // 1. Ищем сокет
-    let socket = 'Unknown';
-    if (t.includes('1700') || t.includes('S1700')) socket = 'LGA1700';
-    if (t.includes('AM5')) socket = 'AM5';
-    if (t.includes('AM4')) socket = 'AM4';
+export function normalizeCPU(title: string): Specs {
 
-    // 2. Ищем поколение/модель (Regex)
-    const modelMatch = title.match(/(i[3579]-\d{5}[KF]?|Ryzen [3579] \d{4}[X]?)/i);
-    const model = modelMatch ? modelMatch[0] : 'Generic CPU';
+    const t = title.toUpperCase()
 
-    // 3. Доп. параметры (TDP, Ядра - если есть в названии)
-    const tdpMatch = title.match(/(\d+)W/);
+    let socket = 'Unknown'
+
+    if (t.includes('LGA1700') || t.includes('1700'))
+        socket = 'LGA1700'
+
+    if (t.includes('AM5'))
+        socket = 'AM5'
+
+    if (t.includes('AM4'))
+        socket = 'AM4'
+
+    const modelMatch = title.match(
+        /(i[3579]-\d{4,5}[KF]?|Ryzen [3579] \d{4}[X3D]?)/i
+    )
+
+    const model = modelMatch
+        ? modelMatch[0]
+        : 'Generic CPU'
+
+    const tdpMatch = title.match(/(\d+)W/)
 
     return {
+        category: 'CPU',
         socket,
         model,
         tdp: tdpMatch ? parseInt(tdpMatch[1]) : null,
         is_unlocked: t.includes('K') || t.includes('X'),
-    };
+    }
 }
