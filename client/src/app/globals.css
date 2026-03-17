@@ -125,3 +125,62 @@ body {
     color: var(--success);
     font-weight: 600;
 }
+
+/* ======================================
+   ANIMATIONS (MODAL / DROPDOWN)
+====================================== */
+
+:root {
+    --spb-anim-fast: 160ms;
+    --spb-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spb-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.0);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity var(--spb-anim-fast) var(--spb-ease-out),
+        background var(--spb-anim-fast) var(--spb-ease-out);
+}
+
+.spb-modal-overlay--open {
+    opacity: 1;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.spb-modal-panel {
+    transform: translateY(8px) scale(0.98);
+    opacity: 0;
+    transition:
+        transform var(--spb-anim-fast) var(--spb-ease-out),
+        opacity var(--spb-anim-fast) var(--spb-ease-out);
+}
+
+.spb-modal-panel--open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+@keyframes spbDropdownIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.spb-dropdown {
+    transform-origin: top;
+    animation: spbDropdownIn var(--spb-anim-fast) var(--spb-ease-out);
+}
