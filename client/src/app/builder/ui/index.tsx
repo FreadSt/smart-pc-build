@@ -298,7 +298,7 @@ export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) 
                     onBuildPc={onBuildPc}
                 />
 
-                <section className="flex-1 space-y-4 p-4">
+                <section className="flex-1 space-y-4 p-4 min-w-0">
                     <div className="flex items-center justify-between">
                         <h2 className="text-sm font-semibold text-text-secondary">Your build</h2>
                         <div className="price text-sm flex items-center gap-2">

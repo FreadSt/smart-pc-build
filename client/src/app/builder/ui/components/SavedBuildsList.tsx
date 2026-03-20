@@ -142,10 +142,11 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Button, Card } from "@/shared/ui";
 import { useBuildStore } from "@/features/build-pc/model/store";
 import type { Category, PartRow } from "@/entities/part/model/types";
-import {localBuildsApi, LocalSavedBuild} from "@/entities/saved-build/api/savedBuilds";
+import { localBuildsApi, LocalSavedBuild } from "@/entities/saved-build/api/savedBuilds";
 
 export function SavedBuildsList({
                                     requiredCategories,
+                                    refreshKey,
                                     maxShown = 5,
                                 }: {
     requiredCategories: Category[];
@@ -153,16 +154,27 @@ export function SavedBuildsList({
     maxShown?: number;
 }) {
     const { parts, setBuild } = useBuildStore();
-    const items = useMemo(() => {
-        return localBuildsApi.getAll();
+
+    // важно: флаг маунта, чтобы не ломать hydration
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
     }, []);
+
+    // читаем localStorage только на клиенте
+    const items = useMemo(() => {
+        if (!mounted) return [];
+        return localBuildsApi.getAll();
+    }, [mounted, refreshKey]);
 
     const partsBySlug = useMemo(() => {
         return new Map((parts ?? []).map((p) => [p.slug, p]));
     }, [parts]);
 
-
     function applyBuild(saved: LocalSavedBuild) {
+        if (!parts?.length) return; // защита
+
         const buildState: Partial<Record<Category, PartRow | null>> = {};
 
         for (const cat of requiredCategories) {
@@ -170,28 +182,50 @@ export function SavedBuildsList({
             buildState[cat] = slug ? partsBySlug.get(slug) ?? null : null;
         }
 
-        setBuild(buildState, { budget: saved.budget, platform: saved.platform });
+        setBuild(buildState, {
+            budget: saved.budget,
+            platform: saved.platform,
+        });
     }
 
-    if (items.length === 0) return null;
+    // не рендерим на сервере
+    if (!mounted || items.length === 0) return null;
 
     return (
-        <Card className="space-y-3">
-            <h3 className="text-sm font-semibold text-text-secondary">Saved builds (Local)</h3>
+        <Card className="space-y-3 w-full">
+            <h3 className="text-sm font-semibold text-text-secondary">
+                Saved builds (Local)
+            </h3>
+
             <div className="space-y-2">
                 {items.slice(0, maxShown).map((saved) => {
-                    const cpuName = saved.buildData.CPU ? partsBySlug.get(saved.buildData.CPU)?.name : 'CPU';
-                    const gpuName = saved.buildData.GPU ? partsBySlug.get(saved.buildData.GPU)?.name : 'GPU';
+                    const cpuName = saved.buildData.CPU
+                        ? partsBySlug.get(saved.buildData.CPU)?.name
+                        : "CPU";
+
+                    const gpuName = saved.buildData.GPU
+                        ? partsBySlug.get(saved.buildData.GPU)?.name
+                        : "GPU";
 
                     return (
-                        <div key={saved.id} className="flex items-center justify-between gap-3 border-b border-border pb-2 last:border-0">
-                            <div className="min-w-0">
-                                <div className="truncate text-sm font-medium">{cpuName} + {gpuName}</div>
+                        <div
+                            key={saved.id}
+                            className="flex items-center justify-between gap-3 border-b border-border pb-2 last:border-0"
+                        >
+                            <div className="min-w-0 flex-1"> {/* Добавь min-w-0 и flex-1 сюда */}
+                                <div className="truncate text-sm font-medium">
+                                    {cpuName} + {gpuName}
+                                </div>
                                 <div className="text-xs text-text-secondary">
                                     {saved.totalPrice} грн • {saved.platform}
                                 </div>
                             </div>
-                            <Button variant="outline" onClick={() => applyBuild(saved)}>
+
+                            <Button
+                                variant="outline"
+                                disabled={!parts?.length}
+                                onClick={() => applyBuild(saved)}
+                            >
                                 Apply
                             </Button>
                         </div>
