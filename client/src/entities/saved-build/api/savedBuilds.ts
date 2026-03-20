@@ -108,3 +108,38 @@ export function buildDataFromBuildState(build: Partial<Record<Category, { slug?:
     return result;
 }
 
+
+
+export interface LocalSavedBuild {
+    id: string;
+    budget: number;
+    platform: Platform;
+    buildData: Partial<Record<Category, string>>; // slugs
+    totalPrice: number;
+    createdAt: string;
+}
+
+const STORAGE_KEY = 'smart_pc_saved_builds';
+
+export const localBuildsApi = {
+    save(build: Omit<LocalSavedBuild, 'id' | 'createdAt'>): void {
+        const builds = this.getAll();
+        const newBuild: LocalSavedBuild = {
+            ...build,
+            id: crypto.randomUUID(),
+            createdAt: new Date().toISOString()
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify([newBuild, ...builds]));
+    },
+
+    getAll(): LocalSavedBuild[] {
+        if (typeof window === 'undefined') return [];
+        const data = localStorage.getItem(STORAGE_KEY);
+        return data ? JSON.parse(data) : [];
+    },
+
+    delete(id: string): void {
+        const builds = this.getAll().filter(b => b.id !== id);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(builds));
+    }
+};

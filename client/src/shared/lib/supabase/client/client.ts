@@ -18,7 +18,6 @@ export function getSupabaseClient() {
   return cached;
 }
 
-const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
 
 export interface BuildReview {
   totalScore: number;
@@ -27,18 +26,64 @@ export interface BuildReview {
   competitors: { name: string; diff: number }[];
 }
 
+function simplifyModelName(name: string): string {
+  return name
+      .toLowerCase()
+      .replace(/(intel|amd|nvidia|asus|msi|gigabyte|palit|zotac|sapphire|powercolor)\s+/g, '') // Убираем бренды
+      .replace(/(core|ryzen|geforce|radeon)\s+/g, '') // Убираем линейки
+      .replace(/\s+(oc|lhr|v2|edition|box|tray|lga\d+|am\d+).*/g, '') // Убираем ревизии и сокеты
+      .trim();
+}
+
 export async function getPerformanceReview(cpuModel: string, gpuModel: string): Promise<BuildReview> {
-  // 1. Получаем данные по обоим компонентам из нашей эталонной таблицы
-  const { data: benchmarks } = await supabase
+  const client = getSupabaseClient(); // Используем функцию с фоллбэками!
+
+  const { data: benchmarks, error } = await client
       .from('hardware_benchmarks')
       .select('*')
       .or(`model_name.ilike.%${cpuModel}%,model_name.ilike.%${gpuModel}%`);
 
-  const cpu = benchmarks?.find(b => b.category === 'CPU');
-  const gpu = benchmarks?.find(b => b.category === 'GPU');
+  if (error) {
+    console.error("Supabase error:", error);
+    return { totalScore: 0, verdict: 'Ошибка базы', tags: [], competitors: [] };
+  }
 
+  // Добавь этот лог, чтобы увидеть, что реально пришло из базы
+  console.log("Matched benchmarks:", benchmarks);
+
+  const cleanCpu = simplifyModelName(cpuModel);
+  const cleanGpu = simplifyModelName(gpuModel);
+
+  console.log(`Searching for: CPU(${cleanCpu}), GPU(${cleanGpu})`);
+
+  // Выполняем запросы параллельно для скорости
+  const [cpuRes, gpuRes] = await Promise.all([
+    client.from('hardware_benchmarks')
+        .select('*')
+        .eq('category', 'CPU')
+        .ilike('model_name', `%${cleanCpu}%`)
+        .limit(1)
+        .single(),
+    client.from('hardware_benchmarks')
+        .select('*')
+        .eq('category', 'GPU')
+        .ilike('model_name', `%${cleanGpu}%`)
+        .limit(1)
+        .single()
+  ]);
+
+  const cpu = cpuRes.data;
+  const gpu = gpuRes.data;
+
+  // Если база всё еще пустая, возвращаем заглушку, чтобы интерфейс не был "дыркой"
   if (!cpu || !gpu) {
-    return { totalScore: 0, verdict: 'Данные не найдены', tags: [], competitors: [] };
+    console.warn("Benchmarks not found:", { cpuFound: !!cpu, gpuFound: !!gpu });
+    return {
+      totalScore: 0,
+      verdict: 'Данные по производительности уточняются',
+      tags: ['В процессе наполнения базы'],
+      competitors: []
+    };
   }
 
   // Формула веса производительности (70% - видеокарта, 30% - процессор для игр)
@@ -54,7 +99,7 @@ export async function getPerformanceReview(cpuModel: string, gpuModel: string): 
   else tags.push('Король 1080p', 'CyberSport Ready');
 
   // 3. Поиск конкурентов (кто на 10% мощнее или слабее)
-  const { data: comps } = await supabase
+  const { data: comps } = await client
       .from('hardware_benchmarks')
       .select('model_name, performance_score')
       .eq('category', 'GPU')
