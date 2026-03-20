@@ -56,6 +56,17 @@ SET default_tablespace = '';
 SET default_table_access_method = "heap";
 
 
+CREATE TABLE IF NOT EXISTS "public"."component_models" (
+    "id" "uuid" DEFAULT "gen_random_uuid"() NOT NULL,
+    "model" "text",
+    "performance_index" integer,
+    "tier" "text"
+);
+
+
+ALTER TABLE "public"."component_models" OWNER TO "postgres";
+
+
 CREATE TABLE IF NOT EXISTS "public"."parts" (
     "id" "uuid" DEFAULT "gen_random_uuid"() NOT NULL,
     "slug" "text" NOT NULL,
@@ -64,11 +75,17 @@ CREATE TABLE IF NOT EXISTS "public"."parts" (
     "price" numeric NOT NULL,
     "specs" "jsonb",
     "link" "text",
-    "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"())
+    "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()),
+    "image_url" "text"
 );
 
 
 ALTER TABLE "public"."parts" OWNER TO "postgres";
+
+
+ALTER TABLE ONLY "public"."component_models"
+    ADD CONSTRAINT "component_models_pkey" PRIMARY KEY ("id");
+
 
 
 ALTER TABLE ONLY "public"."parts"
@@ -83,6 +100,9 @@ ALTER TABLE ONLY "public"."parts"
 
 CREATE POLICY "Allow public read access" ON "public"."parts" FOR SELECT USING (true);
 
+
+
+ALTER TABLE "public"."component_models" ENABLE ROW LEVEL SECURITY;
 
 
 ALTER TABLE "public"."parts" ENABLE ROW LEVEL SECURITY;
@@ -262,6 +282,12 @@ GRANT USAGE ON SCHEMA "public" TO "service_role";
 
 
 
+
+
+
+GRANT ALL ON TABLE "public"."component_models" TO "anon";
+GRANT ALL ON TABLE "public"."component_models" TO "authenticated";
+GRANT ALL ON TABLE "public"."component_models" TO "service_role";
 
 
 

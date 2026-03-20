@@ -13,5 +13,11 @@
     "dev:scraper": "npm run dev --workspace scraper",
     "build:scraper": "npm run build --workspace scraper",
     "start:scraper": "npm run start --workspace scraper"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  },
+  "devDependencies": {
+    "supabase": "^2.82.0"
   }
 }
