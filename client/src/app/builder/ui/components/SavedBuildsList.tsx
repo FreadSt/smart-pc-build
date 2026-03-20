@@ -146,7 +146,6 @@ import {localBuildsApi, LocalSavedBuild} from "@/entities/saved-build/api/savedB
 
 export function SavedBuildsList({
                                     requiredCategories,
-                                    refreshKey,
                                     maxShown = 5,
                                 }: {
     requiredCategories: Category[];
@@ -156,7 +155,7 @@ export function SavedBuildsList({
     const { parts, setBuild } = useBuildStore();
     const items = useMemo(() => {
         return localBuildsApi.getAll();
-    }, [refreshKey]);
+    }, []);
 
     const partsBySlug = useMemo(() => {
         return new Map((parts ?? []).map((p) => [p.slug, p]));
