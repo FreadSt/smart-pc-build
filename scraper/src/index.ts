@@ -8,12 +8,16 @@ import { extractGPUs } from './extractors/rozetkaGPUExtractor';
 import { extractPSUs } from './extractors/rozetkaPSUExtractor';
 import { extractCpuCoolers } from './extractors/rozetkaCpuCoolerExtractor';
 import { extractCases } from './extractors/rozetkaCaseExtractor';
+import { extractRAM } from './extractors/rozetkaRAMExtractor';
+import { extractSSD } from './extractors/rozetkaSSDExtractor';
 import { normalizeCPU } from './normalizzers/cpu';
 import { normalizeMotherboard } from './normalizzers/motherboard';
 import { normalizeGPU } from './normalizzers/gpu';
 import { normalizePSU } from './normalizzers/psu';
 import { normalizeCpuCooler } from './normalizzers/cpuCooler';
 import { normalizeCase } from './normalizzers/case';
+import { normalizeRAM } from './normalizzers/ram';
+import { normalizeSSD } from './normalizzers/ssd';
 import type { RawProduct, Specs } from './types/product';
 
 type CrawlTarget = {
@@ -66,6 +70,20 @@ const targets: CrawlTarget[] = [
       defaultUrl: 'https://hard.rozetka.com.ua/ua/cases/c80090/21397=13807/',
       extract: extractCases,
       normalize: normalizeCase,
+    },
+    {
+        category: 'SSD',
+        envVar: 'ROZETKA_SSD_URL',
+        defaultUrl: 'https://hard.rozetka.com.ua/ua/ssd/c80109/21508=5838,47824/',
+        extract: extractSSD,
+        normalize: normalizeSSD,
+    },
+    {
+        category: 'RAM',
+        envVar: 'ROZETKA_RAM_URL',
+        defaultUrl: 'https://hard.rozetka.com.ua/ua/memory/c80081/21256=3370;21259=ddr5-sdram,119362/',
+        extract: extractRAM,
+        normalize: normalizeRAM,
     },
 ];
 

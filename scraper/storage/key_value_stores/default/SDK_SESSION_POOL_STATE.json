@@ -1,9 +1,9 @@
 {
-  "usableSessionsCount": 12,
+  "usableSessionsCount": 16,
   "retiredSessionsCount": 0,
   "sessions": [
     {
-      "id": "session_1ahOXUgMRQ",
+      "id": "session_qdS9Whilcv",
       "cookieJar": {
         "version": "tough-cookie@6.0.1",
         "storeType": "MemoryCookieStore",
@@ -16,14 +16,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:46:59.066Z",
-      "createdAt": "2026-03-20T09:56:59.066Z",
+      "expiresAt": "2026-03-20T13:57:29.178Z",
+      "createdAt": "2026-03-20T13:07:29.178Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_jxY9Z1bj25",
+      "id": "session_tnxDdSkVu2",
       "cookieJar": {
         "version": "tough-cookie@6.0.1",
         "storeType": "MemoryCookieStore",
@@ -35,143 +35,815 @@
           {
             "key": "cart-modal",
             "value": "old",
-            "expires": "2026-03-20T10:47:00.227Z",
+            "expires": "2026-03-20T13:57:30.725Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.229Z",
-            "lastAccessed": "2026-03-20T09:57:00.229Z"
+            "creation": "2026-03-20T13:07:30.726Z",
+            "lastAccessed": "2026-03-20T13:07:30.726Z"
           },
           {
             "key": "social-auth",
             "value": "new",
-            "expires": "2026-03-20T10:47:00.227Z",
+            "expires": "2026-03-20T13:57:30.725Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.233Z",
-            "lastAccessed": "2026-03-20T09:57:00.233Z"
+            "creation": "2026-03-20T13:07:30.728Z",
+            "lastAccessed": "2026-03-20T13:07:30.728Z"
+          },
+          {
+            "key": "ab_tile_filter",
+            "value": "new",
+            "expires": "2026-03-20T13:57:30.725Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "ab_test_search",
+            "value": "4",
+            "expires": "2026-03-20T13:57:30.725Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "city_id",
+            "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
+            "expires": "2027-03-20T13:07:29.357Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "_uss-csrf",
+            "value": "AYfxHOlFzj2vma6iFS+Fbn8gF7iR3W94iI/e7G8BHUiC+6ts",
+            "expires": "2027-03-20T13:07:29.357Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "ussapp",
+            "value": "_BLbyXuKef4g7BpzB2dOvWqJt7T6dsBacQIQLnCs",
+            "expires": "2027-03-20T13:07:29.357Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "xab_segment",
+            "value": "163",
+            "expires": "2027-04-24T13:07:30.357Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "xl_uid",
+            "value": "Cgo8M2m9RpPBfdiuKEYHAg==",
+            "expires": "2026-03-20T13:57:30.725Z",
+            "domain": "hard.rozetka.com.ua",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "slang",
+            "value": "ua",
+            "expires": "2027-04-24T13:07:30.357Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "uid",
+            "value": "Cgo9D2m9RpTBEHkVqRHDAg==",
+            "expires": "2026-04-19T13:07:30.357Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          },
+          {
+            "key": "__cf_bm",
+            "value": "owoKoSa3TtN5OvS4kpXH1BRfcP4cCyxfQ_8eUcYVuEU-1774012052-1.0.1.1-BpXrvEIgkN2zGtb4j_Rtp0YEFmJUU2DLovH511XUmyHeKZneeDJ4LUmQTz6TBAKKnFWXyJ_7Wb0DfDoNY5EfKNxc4ryZuuteJYfVtjzJS90",
+            "expires": "2026-03-20T13:37:30.357Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:30.729Z",
+            "lastAccessed": "2026-03-20T13:07:30.729Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-03-20T13:57:29.180Z",
+      "createdAt": "2026-03-20T13:07:29.180Z",
+      "usageCount": 1,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_gCnj6kqi4J",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.1",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-03-20T13:57:31.883Z",
+      "createdAt": "2026-03-20T13:07:31.883Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_MZb4JRvqPD",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.1",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "cart-modal",
+            "value": "old",
+            "expires": "2026-03-20T13:57:33.325Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "social-auth",
+            "value": "new",
+            "expires": "2026-03-20T13:57:33.325Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
           },
           {
             "key": "ab_tile_filter",
             "value": "old",
-            "expires": "2026-03-20T10:47:00.227Z",
+            "expires": "2026-03-20T13:57:33.325Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "ab_test_search",
+            "value": "0",
+            "expires": "2026-03-20T13:57:33.325Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "city_id",
+            "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
+            "expires": "2027-03-20T13:07:32.991Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "_uss-csrf",
+            "value": "3o5/QQPX5bcfhF8e1lOCCSGM5bh6N+HiEcZ3+PSLxVKGY7FP",
+            "expires": "2027-03-20T13:07:32.991Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "ussapp",
+            "value": "fGIJBKbAP6HW_X6m96MK5TnXtrUi1kt6Y-5QDVfG",
+            "expires": "2027-03-20T13:07:32.991Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "xab_segment",
+            "value": "50",
+            "expires": "2027-04-24T13:07:32.991Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "xl_uid",
+            "value": "Cgo8Mmm9RparxYHFKFw2Ag==",
+            "expires": "2026-03-20T13:57:33.325Z",
+            "domain": "hard.rozetka.com.ua",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "slang",
+            "value": "ua",
+            "expires": "2027-04-24T13:07:32.991Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "uid",
+            "value": "Cgo9D2m9RpbBEHkVqRbTAg==",
+            "expires": "2026-04-19T13:07:32.991Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          },
+          {
+            "key": "__cf_bm",
+            "value": "BT_9YSZ2HYLh1oTNPmNdAdwP84X4VSzgJwwRWIuN4Aw-1774012054-1.0.1.1-qrSL74UbY2efFLIbCXVLTgempTYAs1vmpcSDzsDX_iClLKAVybtikDPDj1bTbgmAC6lcdY.KVeb3WfJ1WClRf71SVk5ml_Kp5QV.4Q2Mf_o",
+            "expires": "2026-03-20T13:37:32.991Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:33.325Z",
+            "lastAccessed": "2026-03-20T13:07:33.325Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-03-20T13:57:31.884Z",
+      "createdAt": "2026-03-20T13:07:31.884Z",
+      "usageCount": 1,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_oO0WPs1OM2",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.1",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-03-20T13:57:34.502Z",
+      "createdAt": "2026-03-20T13:07:34.502Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_aRex6XQZlJ",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.1",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "cart-modal",
+            "value": "old",
+            "expires": "2026-03-20T13:57:35.587Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.587Z",
+            "lastAccessed": "2026-03-20T13:07:35.587Z"
+          },
+          {
+            "key": "social-auth",
+            "value": "new",
+            "expires": "2026-03-20T13:57:35.587Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.587Z",
+            "lastAccessed": "2026-03-20T13:07:35.587Z"
+          },
+          {
+            "key": "ab_tile_filter",
+            "value": "new",
+            "expires": "2026-03-20T13:57:35.587Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.587Z",
+            "lastAccessed": "2026-03-20T13:07:35.587Z"
+          },
+          {
+            "key": "ab_test_search",
+            "value": "4",
+            "expires": "2026-03-20T13:57:35.587Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.587Z",
+            "lastAccessed": "2026-03-20T13:07:35.587Z"
+          },
+          {
+            "key": "city_id",
+            "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
+            "expires": "2027-03-20T13:07:35.240Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.587Z",
+            "lastAccessed": "2026-03-20T13:07:35.587Z"
+          },
+          {
+            "key": "ussapp",
+            "value": "VIaRNnXsOSp8Kv46GC383e4D0IFT354j-3WmxT1H",
+            "expires": "2027-03-20T13:07:35.241Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.587Z",
+            "lastAccessed": "2026-03-20T13:07:35.587Z"
+          },
+          {
+            "key": "_uss-csrf",
+            "value": "ViGefIh3+hK4JS+U5Lb5cidZvvedBm5fyserR8sDErly9GCn",
+            "expires": "2027-03-20T13:07:35.241Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.587Z",
+            "lastAccessed": "2026-03-20T13:07:35.587Z"
+          },
+          {
+            "key": "xab_segment",
+            "value": "160",
+            "expires": "2027-04-24T13:07:35.241Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.588Z",
+            "lastAccessed": "2026-03-20T13:07:35.588Z"
+          },
+          {
+            "key": "xl_uid",
+            "value": "Cgo8Mmm9RpirxYHFKFx+Ag==",
+            "expires": "2026-03-20T13:57:35.587Z",
+            "domain": "hard.rozetka.com.ua",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-03-20T13:07:35.588Z",
+            "lastAccessed": "2026-03-20T13:07:35.588Z"
+          },
+          {
+            "key": "slang",
+            "value": "ua",
+            "expires": "2027-04-24T13:07:35.241Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.588Z",
+            "lastAccessed": "2026-03-20T13:07:35.588Z"
+          },
+          {
+            "key": "uid",
+            "value": "Cgo9D2m9RpjBEHkVqRt0Ag==",
+            "expires": "2026-04-19T13:07:35.241Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.588Z",
+            "lastAccessed": "2026-03-20T13:07:35.588Z"
+          },
+          {
+            "key": "__cf_bm",
+            "value": "nqmLI4RMOD6dW.WDLZ8_a1fX91ddixbe8RmG_LvG.oA-1774012056-1.0.1.1-JGAkcYTWHq1kCBNnNUieLeDwPCFaY_.i.CTswd2PhISnYQqPdjdvBdfXo8w2RWJVNCknPPp5NCBF4Ehg2_yQwQziFQU1E39ntYZ6JYKCXso",
+            "expires": "2026-03-20T13:37:35.241Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:35.588Z",
+            "lastAccessed": "2026-03-20T13:07:35.588Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-03-20T13:57:34.503Z",
+      "createdAt": "2026-03-20T13:07:34.503Z",
+      "usageCount": 1,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_OkixN48xC4",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.1",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-03-20T13:57:36.690Z",
+      "createdAt": "2026-03-20T13:07:36.690Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_0KDGC3M4fK",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.1",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "cart-modal",
+            "value": "old",
+            "expires": "2026-03-20T13:57:37.880Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "social-auth",
+            "value": "new",
+            "expires": "2026-03-20T13:57:37.881Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "ab_tile_filter",
+            "value": "old",
+            "expires": "2026-03-20T13:57:37.881Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "ab_test_search",
+            "value": "3",
+            "expires": "2026-03-20T13:57:37.881Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "city_id",
+            "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
+            "expires": "2027-03-20T13:07:36.528Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "_uss-csrf",
+            "value": "OU9WUg3lHUvrCpHHl+LYLJJ0I/+uo1nf8/9AKjiuBWjNqAYY",
+            "expires": "2027-03-20T13:07:36.528Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "ussapp",
+            "value": "iTXFaWDarXmG0R_SSkfI0hgHnjj6ZiA74xxq1myY",
+            "expires": "2027-03-20T13:07:36.528Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "xab_segment",
+            "value": "112",
+            "expires": "2027-04-24T13:07:37.528Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "xl_uid",
+            "value": "Cgo8Mmm9RpqrsYHEKD7iAg==",
+            "expires": "2026-03-20T13:57:37.881Z",
+            "domain": "hard.rozetka.com.ua",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "slang",
+            "value": "ua",
+            "expires": "2027-04-24T13:07:37.528Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "uid",
+            "value": "Cgo9D2m9RpvBEHkVqSBnAg==",
+            "expires": "2026-04-19T13:07:37.528Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          },
+          {
+            "key": "__cf_bm",
+            "value": "Lr6LGT6ZR46rFtPZh5LARFjc6einMeGhd1T1EQ0p52M-1774012059-1.0.1.1-2viHgo81Pq3TL_7BT0oEG04s2gBUY49rqabMPUZgev_9pq1IbY.w8VanGYehbfPz0dqnVGn4j.TqtswjKR1_H4eVHaKiHW3J8cPm2i6_rYo",
+            "expires": "2026-03-20T13:37:37.528Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:37.881Z",
+            "lastAccessed": "2026-03-20T13:07:37.881Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-03-20T13:57:36.690Z",
+      "createdAt": "2026-03-20T13:07:36.690Z",
+      "usageCount": 1,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_SYOUDHfRsL",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.1",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-03-20T13:57:39.052Z",
+      "createdAt": "2026-03-20T13:07:39.052Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_7NL6pfsZB0",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.1",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "cart-modal",
+            "value": "old",
+            "expires": "2026-03-20T13:57:40.840Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
+          },
+          {
+            "key": "social-auth",
+            "value": "new",
+            "expires": "2026-03-20T13:57:40.840Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
+          },
+          {
+            "key": "ab_tile_filter",
+            "value": "old",
+            "expires": "2026-03-20T13:57:40.840Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "ab_test_search",
             "value": "1",
-            "expires": "2026-03-20T10:47:00.227Z",
+            "expires": "2026-03-20T13:57:40.840Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "city_id",
             "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
-            "expires": "2027-03-20T09:56:58.893Z",
+            "expires": "2027-03-20T13:07:39.506Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "_uss-csrf",
-            "value": "QEYCJJG4SbpM8CR108QZSf4EYx0k5wH2AI5KRtUFWFq4Y7Kx",
-            "expires": "2027-03-20T09:56:58.893Z",
+            "value": "Yp4wR9IpwyF44drNIEWD0XjUkaDtq7AAQiqqa3E8FwB7twSF",
+            "expires": "2027-03-20T13:07:39.506Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "ussapp",
-            "value": "gk4gYcYRVvPXjGII1U97XHmvedgOq0cXmjynl_ZT",
-            "expires": "2027-03-20T09:56:58.893Z",
+            "value": "MKN_kZZ1i7tV4DRR5U4BHz4WQyVaJbR8lXDYuuDi",
+            "expires": "2027-03-20T13:07:39.506Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "xab_segment",
-            "value": "56",
-            "expires": "2027-04-24T09:56:59.893Z",
+            "value": "90",
+            "expires": "2027-04-24T13:07:40.506Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "xl_uid",
-            "value": "Cgo8Mmm9GeytH4HHIzS3Ag==",
-            "expires": "2026-03-20T10:47:00.228Z",
+            "value": "Cgo8M2m9Rp3BfdiuKEcrAg==",
+            "expires": "2026-03-20T13:57:40.840Z",
             "domain": "hard.rozetka.com.ua",
             "path": "/",
             "hostOnly": true,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "slang",
             "value": "ua",
-            "expires": "2027-04-24T09:56:59.893Z",
+            "expires": "2027-04-24T13:07:40.506Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "uid",
-            "value": "Cgo9D2m9Ge3BEHkVT6huAg==",
-            "expires": "2026-04-19T09:56:59.893Z",
+            "value": "Cgo8kGm9Rp6+7gFHoOsIAg==",
+            "expires": "2026-04-19T13:07:40.506Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           },
           {
             "key": "__cf_bm",
-            "value": "U2EgN3a76BDxCrPewPaMaXB.npUszCdImTg0zdzMy5M-1774000621-1.0.1.1-ppvdx5zPjXcA_m5MLi_Fwg6C2fWbkw5pPCx7ANm_6tZvQuiAjLsmimke4hZFi0zxIk8B.Jtv30edtRDFVfL04_nCFdUYg8x8tMMLKaH4gS4",
-            "expires": "2026-03-20T10:26:59.893Z",
+            "value": "ZG0XgCVV1HerScIK9qx_wFv09UmfoU59Cxx0DSpQbhg-1774012062-1.0.1.1-ffKGNewC43uoHPM4LnilZqPI0Lpp9pCar6Uy9jRVgsOXHlUTl7dQIQnv01U6.FXtNPJ2EaHngHAx.GJ1D8VpqbJYvlPHZRJXYpVK0iG7fYI",
+            "expires": "2026-03-20T13:37:40.506Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:00.234Z",
-            "lastAccessed": "2026-03-20T09:57:00.234Z"
+            "creation": "2026-03-20T13:07:40.840Z",
+            "lastAccessed": "2026-03-20T13:07:40.840Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:46:59.068Z",
-      "createdAt": "2026-03-20T09:56:59.068Z",
+      "expiresAt": "2026-03-20T13:57:39.053Z",
+      "createdAt": "2026-03-20T13:07:39.053Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Q3E8W5g05v",
+      "id": "session_dsEMut95GN",
       "cookieJar": {
         "version": "tough-cookie@6.0.1",
         "storeType": "MemoryCookieStore",
@@ -184,14 +856,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:01.467Z",
-      "createdAt": "2026-03-20T09:57:01.467Z",
+      "expiresAt": "2026-03-20T13:57:41.913Z",
+      "createdAt": "2026-03-20T13:07:41.913Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Yu5I256gRi",
+      "id": "session_blAozIbwyE",
       "cookieJar": {
         "version": "tough-cookie@6.0.1",
         "storeType": "MemoryCookieStore",
@@ -203,143 +875,143 @@
           {
             "key": "cart-modal",
             "value": "old",
-            "expires": "2026-03-20T10:47:02.717Z",
+            "expires": "2026-03-20T13:57:43.291Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.717Z",
-            "lastAccessed": "2026-03-20T09:57:02.717Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "social-auth",
             "value": "new",
-            "expires": "2026-03-20T10:47:02.717Z",
+            "expires": "2026-03-20T13:57:43.291Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.717Z",
-            "lastAccessed": "2026-03-20T09:57:02.717Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "ab_tile_filter",
             "value": "old",
-            "expires": "2026-03-20T10:47:02.717Z",
+            "expires": "2026-03-20T13:57:43.291Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.717Z",
-            "lastAccessed": "2026-03-20T09:57:02.717Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "ab_test_search",
             "value": "3",
-            "expires": "2026-03-20T10:47:02.717Z",
+            "expires": "2026-03-20T13:57:43.291Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.717Z",
-            "lastAccessed": "2026-03-20T09:57:02.717Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "city_id",
             "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
-            "expires": "2027-03-20T09:57:02.364Z",
+            "expires": "2027-03-20T13:07:42.970Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.718Z",
-            "lastAccessed": "2026-03-20T09:57:02.718Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
+          },
+          {
+            "key": "_uss-csrf",
+            "value": "5POihXLOTR3UGDa2hXCglEIqYyFTOtL4N0aS2yIoXGWTUNy1",
+            "expires": "2027-03-20T13:07:42.970Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "ussapp",
-            "value": "9REpx1icSPfUFT9y6JzEe2-H0VEmJvV25-vxZKeH",
-            "expires": "2027-03-20T09:57:02.364Z",
+            "value": "dur2AZHty8oTbiIceANRHqnNRTOkpLpEe-xEwg8Q",
+            "expires": "2027-03-20T13:07:42.970Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.718Z",
-            "lastAccessed": "2026-03-20T09:57:02.718Z"
-          },
-          {
-            "key": "_uss-csrf",
-            "value": "8GBmTNfU44PIjDgqDjlXoMcXeG5oSh2hqFxMO6iBn4OpWE2m",
-            "expires": "2027-03-20T09:57:02.364Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.718Z",
-            "lastAccessed": "2026-03-20T09:57:02.718Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "xab_segment",
-            "value": "129",
-            "expires": "2027-04-24T09:57:02.364Z",
+            "value": "122",
+            "expires": "2027-04-24T13:07:42.970Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.718Z",
-            "lastAccessed": "2026-03-20T09:57:02.718Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "xl_uid",
-            "value": "Cgo8M2m9Ge/Be9iwI13vAg==",
-            "expires": "2026-03-20T10:47:02.717Z",
+            "value": "Cgo8Mmm9RqCrsYHEKD+CAg==",
+            "expires": "2026-03-20T13:57:43.291Z",
             "domain": "hard.rozetka.com.ua",
             "path": "/",
             "hostOnly": true,
-            "creation": "2026-03-20T09:57:02.718Z",
-            "lastAccessed": "2026-03-20T09:57:02.718Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "slang",
             "value": "ua",
-            "expires": "2027-04-24T09:57:02.364Z",
+            "expires": "2027-04-24T13:07:42.970Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.718Z",
-            "lastAccessed": "2026-03-20T09:57:02.718Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "uid",
-            "value": "Cgo9D2m9Ge/BEHkVT61EAg==",
-            "expires": "2026-04-19T09:57:02.364Z",
+            "value": "Cgo9D2m9RqDBEHkVqSvgAg==",
+            "expires": "2026-04-19T13:07:42.970Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.718Z",
-            "lastAccessed": "2026-03-20T09:57:02.718Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           },
           {
             "key": "__cf_bm",
-            "value": "XwwNwQalvwF0iRrS4GAV2C0ohHeDYSJX6LiXJuZoUUg-1774000623-1.0.1.1-G0Pjbw04IWDMcAWl_W5Ruy393q7YZS6bKRdvk.cMoOLNh0sw.l903xpCT_4hE3ceLSGGZ7nK2AfvHhhAIJTvbCIbbyq2_mbdzETD4T8qSbY",
-            "expires": "2026-03-20T10:27:02.364Z",
+            "value": "7hfkUlbJ3.VQ_pcX89o2MY0zJP_Ra1OKBJYQohg3im4-1774012064-1.0.1.1-6.x2EtlltAjlTtSsYhq5HVCMYGWy1gDTiaEkGNjWpxWjMoB4CDVKFESiLXDAeCcFBrTe24SzUvY8JrEZHpDIDhqIv3EK0zAqlzKGcedGOwE",
+            "expires": "2026-03-20T13:37:42.970Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:02.718Z",
-            "lastAccessed": "2026-03-20T09:57:02.718Z"
+            "creation": "2026-03-20T13:07:43.291Z",
+            "lastAccessed": "2026-03-20T13:07:43.291Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:01.468Z",
-      "createdAt": "2026-03-20T09:57:01.468Z",
+      "expiresAt": "2026-03-20T13:57:41.913Z",
+      "createdAt": "2026-03-20T13:07:41.913Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_SoBJ5Pnevb",
+      "id": "session_UtV2W7fPBn",
       "cookieJar": {
         "version": "tough-cookie@6.0.1",
         "storeType": "MemoryCookieStore",
@@ -352,14 +1024,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:03.826Z",
-      "createdAt": "2026-03-20T09:57:03.826Z",
+      "expiresAt": "2026-03-20T13:57:44.451Z",
+      "createdAt": "2026-03-20T13:07:44.451Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_URg50Nbelv",
+      "id": "session_RrUl9cXWz1",
       "cookieJar": {
         "version": "tough-cookie@6.0.1",
         "storeType": "MemoryCookieStore",
@@ -371,479 +1043,143 @@
           {
             "key": "cart-modal",
             "value": "old",
-            "expires": "2026-03-20T10:47:04.936Z",
+            "expires": "2026-03-20T13:57:45.487Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
+            "creation": "2026-03-20T13:07:45.487Z",
+            "lastAccessed": "2026-03-20T13:07:45.487Z"
           },
           {
             "key": "social-auth",
             "value": "new",
-            "expires": "2026-03-20T10:47:04.936Z",
+            "expires": "2026-03-20T13:57:45.487Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "ab_tile_filter",
             "value": "new",
-            "expires": "2026-03-20T10:47:04.936Z",
+            "expires": "2026-03-20T13:57:45.487Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "ab_test_search",
-            "value": "3",
-            "expires": "2026-03-20T10:47:04.936Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "city_id",
-            "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
-            "expires": "2027-03-20T09:57:04.605Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "_uss-csrf",
-            "value": "uPvKDgDoWTVvP5UnTk6bd+aoXAl0c+pR/IyxaUqjmGxntU0J",
-            "expires": "2027-03-20T09:57:04.605Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "ussapp",
-            "value": "d3wqkvWGQJ2F0yK5ZAVq1GvEwqhwWGDXfG4qIo4X",
-            "expires": "2027-03-20T09:57:04.605Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "xab_segment",
-            "value": "141",
-            "expires": "2027-04-24T09:57:04.605Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "xl_uid",
-            "value": "Cgo8M2m9GfHBnditI0DgAg==",
-            "expires": "2026-03-20T10:47:04.936Z",
-            "domain": "hard.rozetka.com.ua",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "slang",
-            "value": "ua",
-            "expires": "2027-04-24T09:57:04.605Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "uid",
-            "value": "Cgo8kGm9GfG+7gFHR87/Ag==",
-            "expires": "2026-04-19T09:57:04.605Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          },
-          {
-            "key": "__cf_bm",
-            "value": "3C8NYoGdR7mohlo5tyFxbM9UhT3LIiYZmV7om9KyVsI-1774000625-1.0.1.1-S6aLI0RM8Af0GVv8oRCrIF6YvISNR1UZd5ccQATImUEzbWyfx1Tbkop4RUNK9flqUOCF1D28lTeuMkzTUtpJtMoT1yILjQ5aEJmDwmd54II",
-            "expires": "2026-03-20T10:27:04.605Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:04.936Z",
-            "lastAccessed": "2026-03-20T09:57:04.936Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:03.827Z",
-      "createdAt": "2026-03-20T09:57:03.827Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_46KhhZpkJ0",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.1",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:05.996Z",
-      "createdAt": "2026-03-20T09:57:05.996Z",
-      "usageCount": 0,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_1LTiRWzymX",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.1",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "cart-modal",
-            "value": "old",
-            "expires": "2026-03-20T10:47:07.099Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "social-auth",
-            "value": "new",
-            "expires": "2026-03-20T10:47:07.099Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "ab_tile_filter",
-            "value": "old",
-            "expires": "2026-03-20T10:47:07.099Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "ab_test_search",
-            "value": "3",
-            "expires": "2026-03-20T10:47:07.099Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "city_id",
-            "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
-            "expires": "2027-03-20T09:57:05.789Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "_uss-csrf",
-            "value": "AbMxki/jnyau95bRukQ+gAHZaG/0vIwv7BNrfH4k73hZn+GL",
-            "expires": "2027-03-20T09:57:05.789Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "ussapp",
-            "value": "wJ18rowa_pYw4KLCRaS05V2Zwso0JonZgKMqwRtK",
-            "expires": "2027-03-20T09:57:05.789Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "xab_segment",
-            "value": "103",
-            "expires": "2027-04-24T09:57:06.789Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "xl_uid",
-            "value": "Cgo8Mmm9GfOr4YHGI1XAAg==",
-            "expires": "2026-03-20T10:47:07.099Z",
-            "domain": "hard.rozetka.com.ua",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2026-03-20T09:57:07.099Z",
-            "lastAccessed": "2026-03-20T09:57:07.099Z"
-          },
-          {
-            "key": "slang",
-            "value": "ua",
-            "expires": "2027-04-24T09:57:06.789Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.100Z",
-            "lastAccessed": "2026-03-20T09:57:07.100Z"
-          },
-          {
-            "key": "uid",
-            "value": "Cgo8kGm9GfS+7gFHR9MWAg==",
-            "expires": "2026-04-19T09:57:06.789Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.100Z",
-            "lastAccessed": "2026-03-20T09:57:07.100Z"
-          },
-          {
-            "key": "__cf_bm",
-            "value": "fjMm_Zw7j2PlgAdQ80IRSX.UQ__63bgFbf_rbQkGhCc-1774000628-1.0.1.1-d76ySuCiBJ0g_4Kys6eX9EarodYezWnt0ud7ZElnHz7BirzIUHvE3q1.e6S_z3DUZxxFY5imyxDREx39P8B0i1gKf1UUZWIgmJ5_XzWsjos",
-            "expires": "2026-03-20T10:27:06.789Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:07.100Z",
-            "lastAccessed": "2026-03-20T09:57:07.100Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:05.996Z",
-      "createdAt": "2026-03-20T09:57:05.996Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_cOD6NzFvZy",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.1",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:08.133Z",
-      "createdAt": "2026-03-20T09:57:08.133Z",
-      "usageCount": 0,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_meWeuJ2nrO",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.1",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "cart-modal",
-            "value": "old",
-            "expires": "2026-03-20T10:47:09.199Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
-          },
-          {
-            "key": "social-auth",
-            "value": "new",
-            "expires": "2026-03-20T10:47:09.199Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
-          },
-          {
-            "key": "ab_tile_filter",
-            "value": "new",
-            "expires": "2026-03-20T10:47:09.199Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "ab_test_search",
             "value": "4",
-            "expires": "2026-03-20T10:47:09.199Z",
+            "expires": "2026-03-20T13:57:45.487Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "city_id",
             "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
-            "expires": "2027-03-20T09:57:07.884Z",
+            "expires": "2027-03-20T13:07:45.143Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "_uss-csrf",
-            "value": "9Xro0i8Ht6OwhMSjmzcns0ERmALsQu5FfaLMSuzLLPDB0vqQ",
-            "expires": "2027-03-20T09:57:07.884Z",
+            "value": "NHlVz6WQHABLlL57oF3qnuU+p92dCiutUKZ2oGYvVv7tEkC9",
+            "expires": "2027-03-20T13:07:45.143Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "ussapp",
-            "value": "CXe_NXqX1nDQNde7Cv6n41wyO3dgwwTQN8Zv6DY9",
-            "expires": "2027-03-20T09:57:07.884Z",
+            "value": "Dn0ExvFKWVa2zOUV_uKOtDbj9YOdWh8A1vI4xwfN",
+            "expires": "2027-03-20T13:07:45.143Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "xab_segment",
-            "value": "158",
-            "expires": "2027-04-24T09:57:08.884Z",
+            "value": "151",
+            "expires": "2027-04-24T13:07:45.143Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "xl_uid",
-            "value": "Cgo8M2m9GfXBfdiuI0NnAg==",
-            "expires": "2026-03-20T10:47:09.199Z",
+            "value": "Cgo8M2m9RqLBedivKDG1Ag==",
+            "expires": "2026-03-20T13:57:45.487Z",
             "domain": "hard.rozetka.com.ua",
             "path": "/",
             "hostOnly": true,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "slang",
             "value": "ua",
-            "expires": "2027-04-24T09:57:08.884Z",
+            "expires": "2027-04-24T13:07:45.143Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "uid",
-            "value": "Cgo9D2m9GfbBEHkVT7obAg==",
-            "expires": "2026-04-19T09:57:08.884Z",
+            "value": "Cgo9D2m9RqLBEHkVqTBYAg==",
+            "expires": "2026-04-19T13:07:45.143Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           },
           {
             "key": "__cf_bm",
-            "value": "j_M.qk3RSmWcfx_LRiCGp5dpgFtgaIrc9lwZX5UbjFE-1774000630-1.0.1.1-DLvXnRmDAHmbP3ZETClAKGEQDYI4IO9vlPb4bw8b5J0BClsj7_vmkT7xYuERdvxqUavD1w4Kfxkr6V0zqt5MORh7hh2WNaPLnlLGaTtl9Fg",
-            "expires": "2026-03-20T10:27:08.884Z",
+            "value": "bQX8M7s6JXQAI7XctGSirnfoKiRKXIUAoPDXGNRoflE-1774012066-1.0.1.1-hlFlm56j6BuPsDiFkGVWb2UuAj1IUkBqtLIGkEhq9z_YvLmUWjQLCOjIL3G04k2Nc_yNinojGtx5jefHle8yk.KuPjQxQcgCIoyILP75vEY",
+            "expires": "2026-03-20T13:37:45.143Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:09.199Z",
-            "lastAccessed": "2026-03-20T09:57:09.199Z"
+            "creation": "2026-03-20T13:07:45.488Z",
+            "lastAccessed": "2026-03-20T13:07:45.488Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:08.133Z",
-      "createdAt": "2026-03-20T09:57:08.133Z",
+      "expiresAt": "2026-03-20T13:57:44.452Z",
+      "createdAt": "2026-03-20T13:07:44.452Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_hxG81doesN",
+      "id": "session_Dw1whUaDDp",
       "cookieJar": {
         "version": "tough-cookie@6.0.1",
         "storeType": "MemoryCookieStore",
@@ -856,14 +1192,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:10.279Z",
-      "createdAt": "2026-03-20T09:57:10.279Z",
+      "expiresAt": "2026-03-20T13:57:46.597Z",
+      "createdAt": "2026-03-20T13:07:46.597Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_R63jTVMgNk",
+      "id": "session_C1ig38O4xV",
       "cookieJar": {
         "version": "tough-cookie@6.0.1",
         "storeType": "MemoryCookieStore",
@@ -875,137 +1211,137 @@
           {
             "key": "cart-modal",
             "value": "old",
-            "expires": "2026-03-20T10:47:11.489Z",
+            "expires": "2026-03-20T13:57:48.089Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "social-auth",
             "value": "new",
-            "expires": "2026-03-20T10:47:11.489Z",
+            "expires": "2026-03-20T13:57:48.089Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "ab_tile_filter",
-            "value": "new",
-            "expires": "2026-03-20T10:47:11.489Z",
+            "value": "old",
+            "expires": "2026-03-20T13:57:48.089Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "ab_test_search",
-            "value": "4",
-            "expires": "2026-03-20T10:47:11.489Z",
+            "value": "1",
+            "expires": "2026-03-20T13:57:48.089Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "city_id",
             "value": "b205dde2-2e2e-4eb9-aef2-a67c82bbdf27",
-            "expires": "2027-03-20T09:57:11.186Z",
+            "expires": "2027-03-20T13:07:46.777Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
-          },
-          {
-            "key": "_uss-csrf",
-            "value": "Wsc6EU8sGPoxIS/zXrmj0Xs5t873odxIULEXJ//3MDi8PKOr",
-            "expires": "2027-03-20T09:57:11.186Z",
-            "domain": "rozetka.com.ua",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "ussapp",
-            "value": "pHcnDqed_LOogPrk488sb-ZZh1m14jg6Ba5-L9Lp",
-            "expires": "2027-03-20T09:57:11.186Z",
+            "value": "biogZdbQig7JVywbaeGuEk1FSv6qnaUFh6rzeJwu",
+            "expires": "2027-03-20T13:07:46.777Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
-            "key": "xab_segment",
-            "value": "182",
-            "expires": "2027-04-24T09:57:11.186Z",
+            "key": "_uss-csrf",
+            "value": "DpP9BCdHfMk2njp00cNP/IKvrN3Gu6IHw7X3bPZFunnfsi0/",
+            "expires": "2027-03-20T13:07:46.777Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
+          },
+          {
+            "key": "xab_segment",
+            "value": "96",
+            "expires": "2027-04-24T13:07:47.777Z",
+            "domain": "rozetka.com.ua",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "xl_uid",
-            "value": "Cgo8Mmm9Gfir4YHGI1ZlAg==",
-            "expires": "2026-03-20T10:47:11.489Z",
+            "value": "Cgo8M2m9RqTBfdiuKEhMAg==",
+            "expires": "2026-03-20T13:57:48.089Z",
             "domain": "hard.rozetka.com.ua",
             "path": "/",
             "hostOnly": true,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "slang",
             "value": "ua",
-            "expires": "2027-04-24T09:57:11.186Z",
+            "expires": "2027-04-24T13:07:47.777Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "uid",
-            "value": "Cgo9D2m9GfjBEHkVT76WAg==",
-            "expires": "2026-04-19T09:57:11.186Z",
+            "value": "Cgo9D2m9RqXBEHkVqTYPAg==",
+            "expires": "2026-04-19T13:07:47.777Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.489Z",
-            "lastAccessed": "2026-03-20T09:57:11.489Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           },
           {
             "key": "__cf_bm",
-            "value": "D4tUUbgeNH7tWQC9WdzqpWWPzlIVfc45U2zXBJs2nS4-1774000632-1.0.1.1-DlB6ffNUUIV0RoPKXaWkUbhXtYFIyPZW45yWVPodGx9Cva4oZoO9YyT7Mv.DRbF5qDhjxylENasA3aV3rpJzb7oh1eJ8__gQcwiMSUidcMU",
-            "expires": "2026-03-20T10:27:11.186Z",
+            "value": "qRnjTe0uo4lY8NBmv7E49CaEFR_rbtuIMGo34NiYbDU-1774012069-1.0.1.1-Mi6Z1tc4vHqyhdX5idln0Kb19OJvIP5jgXYsb21vU.f6yJmoYPZ8P3ptlu3NhPTEKuoXics9OMB3t6WkG_TxliyMe0SI8HbIyyxQ.kxJgFw",
+            "expires": "2026-03-20T13:37:47.777Z",
             "domain": "rozetka.com.ua",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-03-20T09:57:11.490Z",
-            "lastAccessed": "2026-03-20T09:57:11.490Z"
+            "creation": "2026-03-20T13:07:48.089Z",
+            "lastAccessed": "2026-03-20T13:07:48.089Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-03-20T10:47:10.280Z",
-      "createdAt": "2026-03-20T09:57:10.280Z",
+      "expiresAt": "2026-03-20T13:57:46.598Z",
+      "createdAt": "2026-03-20T13:07:46.598Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0

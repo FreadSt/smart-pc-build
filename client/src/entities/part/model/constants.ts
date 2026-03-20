@@ -7,6 +7,8 @@ export const CATEGORY_LABEL: Record<Category, string> = {
     PSU: "Power supply",
     CPU_COOLER: "CPU cooler",
     CASE: "Case",
+    RAM: "RAM",
+    SSD: "SSD",
 };
 
 export const PLATFORM_LABEL: Record<Platform, string> = {

@@ -56,3 +56,70 @@ export function getFormFactor(part?: PartRow | null) {
     if (upper === "OTHER" || upper === "OTHERS") return "Other";
     return norm;
 }
+
+export function getCpuDdrType(part?: PartRow | null): "DDR4" | "DDR5" | "Other" | null {
+    const v = part?.specs?.ddr_type;
+    if (typeof v !== "string") return null;
+    const upper = v.trim().toUpperCase();
+    if (upper.includes("DDR5")) return "DDR5";
+    if (upper.includes("DDR4")) return "DDR4";
+    if (upper === "OTHER" || upper.length === 0) return "Other";
+    return "Other";
+}
+
+export function getCpuMaxMemorySpeedMhz(part?: PartRow | null): number | null {
+    const v = part?.specs?.max_memory_speed_mhz;
+    if (typeof v === "number" && Number.isFinite(v) && v > 0) return v;
+    if (typeof v === "string") {
+        const n = parseInt(v, 10);
+        return Number.isFinite(n) && n > 0 ? n : null;
+    }
+    return null;
+}
+
+export function getRamDdrType(part?: PartRow | null): "DDR4" | "DDR5" | "Other" | null {
+    const v = part?.specs?.ddr_type;
+    if (typeof v !== "string") return null;
+    const upper = v.trim().toUpperCase();
+    if (upper.includes("DDR5")) return "DDR5";
+    if (upper.includes("DDR4")) return "DDR4";
+    return "Other";
+}
+
+export function getMotherboardRamType(part?: PartRow | null): "DDR4" | "DDR5" | "Other" | null {
+    const v = part?.specs?.ram_type;
+    if (typeof v !== "string") return null;
+    const upper = v.trim().toUpperCase();
+    if (upper.includes("DDR5")) return "DDR5";
+    if (upper.includes("DDR4")) return "DDR4";
+    return "Other";
+}
+
+export function getRamSpeedMhz(part?: PartRow | null): number | null {
+    const v = part?.specs?.speed_mhz;
+    if (typeof v === "number" && Number.isFinite(v) && v > 0) return v;
+    if (typeof v === "string") {
+        const n = parseInt(v, 10);
+        return Number.isFinite(n) && n > 0 ? n : null;
+    }
+    return null;
+}
+
+export function getM2Slots(part?: PartRow | null): number | null {
+    const v = part?.specs?.m2_slots;
+    if (typeof v === "number" && Number.isFinite(v) && v >= 0) return v;
+    if (typeof v === "string") {
+        const n = parseInt(v, 10);
+        return Number.isFinite(n) && n >= 0 ? n : null;
+    }
+    return null;
+}
+
+export function getSsdFormFactor(part?: PartRow | null): "M.2" | "2.5" | "Other" | null {
+    const v = part?.specs?.form_factor;
+    if (typeof v !== "string") return null;
+    const upper = v.trim().toUpperCase();
+    if (upper.includes("M.2") || upper.includes("M2") || upper.includes("NVME")) return "M.2";
+    if (upper.includes("2.5") || upper.includes("2,5")) return "2.5";
+    return "Other";
+}

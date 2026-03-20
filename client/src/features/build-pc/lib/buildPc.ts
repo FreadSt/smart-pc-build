@@ -1,6 +1,17 @@
 import { PartRow } from "@/entities/part/model/types";
 import { normalizePrice } from "@/shared/lib/utils/price";
-import { getSocket, getCoolerSockets, getFormFactor } from "./compatibility";
+import {
+    getCoolerSockets,
+    getCpuDdrType,
+    getCpuMaxMemorySpeedMhz,
+    getFormFactor,
+    getM2Slots,
+    getMotherboardRamType,
+    getRamDdrType,
+    getRamSpeedMhz,
+    getSsdFormFactor,
+    getSocket,
+} from "./compatibility";
 import { getBudgetParts } from "./budget";
 
 function pickBestUnderBudget(parts: PartRow[], budget: number) {
@@ -75,6 +86,36 @@ export function buildPc(rows: PartRow[], budget: number) {
         b.case
     );
 
+    const ramPoolAll = rows.filter((p) => p.category === "RAM");
+    const moboRamType = getMotherboardRamType(mobo);
+    const cpuDdrType = getCpuDdrType(cpu);
+    const cpuMaxSpeed = getCpuMaxMemorySpeedMhz(cpu);
+
+    const ramCompatible = ramPoolAll.filter((r) => {
+        const ramDdr = getRamDdrType(r);
+        if (moboRamType && moboRamType !== "Other" && ramDdr && ramDdr !== moboRamType) return false;
+        if (cpuDdrType && cpuDdrType !== "Other" && ramDdr && ramDdr !== cpuDdrType) return false;
+
+        const ramSpeed = getRamSpeedMhz(r);
+        if (cpuMaxSpeed && ramSpeed && ramSpeed > cpuMaxSpeed) return false;
+
+        return true;
+    });
+
+    const ram = pickBestUnderBudget(ramCompatible.length ? ramCompatible : ramPoolAll, b.ram);
+
+    const ssdPoolAll = rows.filter((p) => p.category === "SSD");
+    const m2Slots = getM2Slots(mobo);
+    const ssdCompatible =
+        m2Slots === 0
+            ? ssdPoolAll.filter((s) => {
+                  const ff = getSsdFormFactor(s);
+                  return !ff || ff === "2.5";
+              })
+            : ssdPoolAll;
+
+    const ssd = pickBestUnderBudget(ssdCompatible.length ? ssdCompatible : ssdPoolAll, b.ssd);
+
     return {
         CPU: cpu,
         MOTHERBOARD: mobo,
@@ -82,5 +123,7 @@ export function buildPc(rows: PartRow[], budget: number) {
         PSU: psu,
         CPU_COOLER: cooler,
         CASE: pcCase,
+        RAM: ram,
+        SSD: ssd,
     };
 }
