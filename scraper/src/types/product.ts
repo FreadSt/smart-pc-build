@@ -1,10 +1,17 @@
-export type Category = 'CPU' | 'MOTHERBOARD' | 'GPU' | 'PSU' | 'CPU_COOLER';
+export type Category = 'CPU' | 'MOTHERBOARD' | 'GPU' | 'PSU' | 'CPU_COOLER' | 'CASE';
 
 export type CpuSpecs = {
     socket: string;
     model: string;
     tdp: number | null;
     is_unlocked: boolean;
+};
+
+export type CaseSpecs = {
+    form_factor: 'ATX' | 'mATX' | 'ITX' | 'Other';
+    model: string;
+    max_cooler_height: number;
+    max_gpu_length: number;
 };
 
 export type MotherboardSpecs = {
@@ -37,7 +44,8 @@ export type Specs =
     | ({ category: 'MOTHERBOARD' } & MotherboardSpecs)
     | ({ category: 'GPU' } & GpuSpecs)
     | ({ category: 'PSU' } & PsuSpecs)
-    | ({ category: 'CPU_COOLER' } & CpuCoolerSpecs);
+    | ({ category: 'CPU_COOLER' } & CpuCoolerSpecs)
+    | ({ category: 'CASE' } & CaseSpecs)
 
 export type RawProduct = {
     title: string;

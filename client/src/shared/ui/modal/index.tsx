@@ -5,12 +5,19 @@ interface ModalProps extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
 }
 
 export function Modal({ open = false, children, className = "", ...props }: ModalProps) {
-  if (!open) return null;
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+    <div
+      className={[
+        "spb-modal-overlay",
+        open ? "spb-modal-overlay--open" : "",
+      ].join(" ")}
+    >
       <div
-        className={`card max-h-[90vh] w-full max-w-lg overflow-auto ${className}`}
+        className={[
+          "card spb-modal-panel max-h-[90vh] w-full max-w-lg overflow-auto",
+          open ? "spb-modal-panel--open" : "",
+          className,
+        ].join(" ")}
         {...props}
       >
         {children}

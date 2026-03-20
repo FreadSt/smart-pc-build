@@ -7,11 +7,13 @@ import { extractMotherboards } from './extractors/rozetkaMotherboardExtractor';
 import { extractGPUs } from './extractors/rozetkaGPUExtractor';
 import { extractPSUs } from './extractors/rozetkaPSUExtractor';
 import { extractCpuCoolers } from './extractors/rozetkaCpuCoolerExtractor';
+import { extractCases } from './extractors/rozetkaCaseExtractor';
 import { normalizeCPU } from './normalizzers/cpu';
 import { normalizeMotherboard } from './normalizzers/motherboard';
 import { normalizeGPU } from './normalizzers/gpu';
 import { normalizePSU } from './normalizzers/psu';
 import { normalizeCpuCooler } from './normalizzers/cpuCooler';
+import { normalizeCase } from './normalizzers/case';
 import type { RawProduct, Specs } from './types/product';
 
 type CrawlTarget = {
@@ -57,6 +59,13 @@ const targets: CrawlTarget[] = [
         defaultUrl: 'https://hard.rozetka.com.ua/ua/coolers/c80099/vid-229213=kuleri,sistemi-vodyanogo-ohlagdeniya;21439=4996/',
         extract: extractCpuCoolers,
         normalize: normalizeCpuCooler,
+    },
+    {
+      category: 'CASE',
+      envVar: 'ROZETKA_CASE_URL',
+      defaultUrl: 'https://hard.rozetka.com.ua/ua/cases/c80090/21397=13807/',
+      extract: extractCases,
+      normalize: normalizeCase,
     },
 ];
 

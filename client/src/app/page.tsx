@@ -1,6 +1,6 @@
-import { BuilderPage } from "@/app/builder/ui";
+import { BuilderLayout } from "@/widgets/builder/ui/BuilderLayout";
 
 export default function Home() {
-  return <BuilderPage />;
+  return <BuilderLayout />;
 }
 
