@@ -4,21 +4,36 @@ import React, { useMemo, useState } from "react";
 import { Header } from "@/widgets/header";
 import { BuilderSettingsPanel } from "./components/BuilderSettingsPanel";
 import { BuildCardsGrid } from "./components/BuildCardsGrid";
-import { PerformanceEstimatePanel } from "./components/PerformanceEstimatePanel";
 import { PartPickerModal } from "./components/PartPickerModal";
 import { useBuildStore } from "@/features/build-pc/model/store";
 import { Category, PartRow, Platform } from "@/entities/part/model/types";
 import { PLATFORM_SOCKETS } from "@/entities/part/model/constants";
-import { getCoolerSockets, getFormFactor, getSocket } from "@/features/build-pc/lib/compatibility";
+import {
+    getCoolerSockets,
+    getCpuDdrType,
+    getCpuMaxMemorySpeedMhz,
+    getFormFactor,
+    getM2Slots,
+    getMotherboardRamType,
+    getRamDdrType,
+    getRamSpeedMhz,
+    getSsdFormFactor,
+    getSocket,
+} from "@/features/build-pc/lib/compatibility";
 import { money, normalizePrice } from "@/shared/lib/utils/price";
 import { AlertTriangle } from "lucide-react";
 import { BuilderTipsCarousel } from "./components/BuilderTipsCarousel";
+import { PerformanceEstimatePanel } from "./components/PerformanceEstimatePanel";
+import { SavedBuildsList } from "./components/SavedBuildsList";
+import { upsertSavedBuild } from "@/entities/saved-build/api/savedBuilds";
+import { Button } from "@/shared/ui";
+import { OnboardingModal } from "./components/OnboardingModal";
 
-const CATEGORIES: Category[] = ["CPU", "MOTHERBOARD", "GPU", "PSU", "CPU_COOLER", "CASE"];
+const CATEGORIES: Category[] = ["CPU", "MOTHERBOARD", "GPU", "PSU", "CPU_COOLER", "CASE", "RAM", "SSD"];
 
 type BuildState = Partial<Record<Category, PartRow | null>>;
 
-export function BuilderPage() {
+export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) {
     const {
         budget,
         platform,
@@ -33,6 +48,8 @@ export function BuilderPage() {
 
     const [activeCategory, setActiveCategory] = useState<Category | null>(null);
     const [dataError, setDataError] = useState<string | null>(null);
+    const [savedRefreshKey, setSavedRefreshKey] = useState(0);
+    const [savingBuild, setSavingBuild] = useState(false);
 
     const budgetTooLow = budget < 8000;
 
@@ -44,6 +61,8 @@ export function BuilderPage() {
             PSU: [],
             CPU_COOLER: [],
             CASE: [],
+            RAM: [],
+            SSD: [],
         };
 
         for (const p of parts) {
@@ -75,6 +94,12 @@ export function BuilderPage() {
 
     const socketCpu = getSocket((build as BuildState).CPU);
     const socketMobo = getSocket((build as BuildState).MOTHERBOARD);
+
+    const cpuSpecs = (build as BuildState).CPU?.specs as Record<string, unknown> | undefined;
+    const gpuSpecs = (build as BuildState).GPU?.specs as Record<string, unknown> | undefined;
+
+    const cpuModel = typeof cpuSpecs?.model === "string" ? cpuSpecs.model : null;
+    const gpuModel = typeof gpuSpecs?.chipset === "string" ? gpuSpecs.chipset : null;
 
     const platformSockets = useMemo(() => {
         if (platform === "any") return null;
@@ -134,6 +159,33 @@ export function BuilderPage() {
             });
         }
 
+        if (activeCategory === "RAM") {
+            const moboRamType = getMotherboardRamType((build as BuildState).MOTHERBOARD);
+            const cpuDdrType = getCpuDdrType((build as BuildState).CPU);
+            const cpuMaxSpeed = getCpuMaxMemorySpeedMhz((build as BuildState).CPU);
+
+            return list.filter((p) => {
+                const ramDdr = getRamDdrType(p);
+                if (moboRamType && moboRamType !== "Other" && ramDdr && ramDdr !== moboRamType) return false;
+                if (cpuDdrType && cpuDdrType !== "Other" && ramDdr && ramDdr !== cpuDdrType) return false;
+
+                const ramSpeed = getRamSpeedMhz(p);
+                if (cpuMaxSpeed && ramSpeed && ramSpeed > cpuMaxSpeed) return false;
+                return true;
+            });
+        }
+
+        if (activeCategory === "SSD") {
+            const m2Slots = getM2Slots((build as BuildState).MOTHERBOARD);
+            if (m2Slots === 0) {
+                return list.filter((p) => {
+                    const ff = getSsdFormFactor(p);
+                    return !ff || ff === "2.5";
+                });
+            }
+            return list;
+        }
+
         // GPU / PSU: no additional filtering.
         return list;
     }, [
@@ -159,6 +211,38 @@ export function BuilderPage() {
         } catch (e) {
             const msg = e instanceof Error ? e.message : String(e);
             setDataError(msg);
+        }
+    }
+
+    const isBuildComplete = useMemo(() => {
+        return CATEGORIES.every((cat) => Boolean((build as BuildState)[cat]));
+    }, [build]);
+
+    async function onSaveBuild() {
+        if (!isBuildComplete) return;
+
+        setSavingBuild(true);
+        try {
+            const buildData: Partial<Record<Category, string>> = {};
+            for (const cat of CATEGORIES) {
+                const part = (build as BuildState)[cat];
+                if (part) buildData[cat] = part.slug;
+            }
+
+            await upsertSavedBuild({
+                id: savedBuildId ?? undefined,
+                budget,
+                platform,
+                buildData: buildData,
+                totalPrice,
+            });
+
+            setSavedRefreshKey((k) => k + 1);
+        } catch (e) {
+            const msg = e instanceof Error ? e.message : String(e);
+            setDataError(msg);
+        } finally {
+            setSavingBuild(false);
         }
     }
 
@@ -210,9 +294,20 @@ export function BuilderPage() {
                         partsByCategory={partsByCategory}
                         onChangeCategory={setActiveCategory}
                     />
+
+                    <div className="flex items-center justify-between gap-3">
+                        <Button variant="primary" disabled={!isBuildComplete || savingBuild} onClick={() => void onSaveBuild()}>
+                            {savingBuild ? "Saving..." : "Save build"}
+                        </Button>
+                    </div>
+
+                    <SavedBuildsList requiredCategories={CATEGORIES} refreshKey={savedRefreshKey} />
                 </section>
 
-                <PerformanceEstimatePanel />
+                <PerformanceEstimatePanel
+                    cpuModel={typeof cpuModel === "string" ? cpuModel : null}
+                    gpuModel={typeof gpuModel === "string" ? gpuModel : null}
+                />
             </main>
 
             <PartPickerModal
@@ -222,6 +317,8 @@ export function BuilderPage() {
                 getBudgetImpact={getBudgetImpact}
                 onSelectPart={handleSelectPart}
             />
+
+            <OnboardingModal />
         </div>
     );
 }

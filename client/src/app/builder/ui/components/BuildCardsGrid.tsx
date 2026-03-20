@@ -18,15 +18,18 @@ const CARDS: { category: Category; allowAuto: boolean }[] = [
     { category: "PSU", allowAuto: true },
     { category: "CPU_COOLER", allowAuto: false },
     { category: "CASE", allowAuto: false },
+    { category: "RAM", allowAuto: true },
+    { category: "SSD", allowAuto: true },
 ];
 
 export function BuildCardsGrid({ build, partsByCategory, onChangeCategory }: Props) {
+
     return (
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {CARDS.map(({ category, allowAuto }) => {
                 const part = build[category] ?? null;
                 const canChange = partsByCategory[category].length > 0;
-
+                console.log(part, 'part')
                 return (
                     <Card key={category} className="space-y-2">
                         <div className="text-xs font-semibold uppercase tracking-wide text-text-secondary">

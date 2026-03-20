@@ -21,12 +21,24 @@ export function normalizeMotherboard(title: string): Specs {
     if (t.includes('DDR5')) ram_type = 'DDR5';
     else if (t.includes('DDR4')) ram_type = 'DDR4';
 
+    // Best-effort parsing of M.2 slot count from title.
+    // Examples: "2x M.2", "3 x M.2", "M.2" (fallback to 1).
+    let m2_slots: number | null = null;
+    const m2CountMatch = title.match(/(\d+)\s*(?:x|X)\s*M\.?\s*2/i);
+    if (m2CountMatch) {
+        const n = parseInt(m2CountMatch[1], 10);
+        m2_slots = Number.isFinite(n) && n > 0 ? n : null;
+    } else if (t.includes('M.2') || t.includes('M2')) {
+        m2_slots = 1;
+    }
+
     return {
         category: 'MOTHERBOARD',
         socket,
         form_factor,
         chipset,
         ram_type,
+        m2_slots,
     };
 }
 

@@ -4,7 +4,9 @@ export type Category =
     | "GPU"
     | "PSU"
     | "CPU_COOLER"
-    | "CASE";
+    | "CASE"
+    | "RAM"
+    | "SSD";
 
 export type Platform = "intel" | "amd" | "any";
 
