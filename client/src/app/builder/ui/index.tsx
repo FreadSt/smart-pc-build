@@ -24,7 +24,6 @@ import { money, normalizePrice } from "@/shared/lib/utils/price";
 import { AlertTriangle } from "lucide-react";
 import { BuilderTipsCarousel } from "./components/BuilderTipsCarousel";
 import { PerformanceEstimatePanel } from "./components/PerformanceEstimatePanel";
-import { SavedBuildsList } from "./components/SavedBuildsList";
 import {localBuildsApi, upsertSavedBuild} from "@/entities/saved-build/api/savedBuilds";
 import { Button } from "@/shared/ui";
 import { OnboardingModal } from "./components/OnboardingModal";
@@ -219,34 +218,6 @@ export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) 
         return CATEGORIES.every((cat) => Boolean((build as BuildState)[cat]));
     }, [build]);
 
-    // async function onSaveBuild() {
-    //     if (!isBuildComplete) return;
-    //
-    //     setSavingBuild(true);
-    //     try {
-    //         const buildData: Partial<Record<Category, string>> = {};
-    //         for (const cat of CATEGORIES) {
-    //             const part = (build as BuildState)[cat];
-    //             if (part) buildData[cat] = part.slug;
-    //         }
-    //
-    //         await upsertSavedBuild({
-    //             id: savedBuildId ?? undefined,
-    //             budget,
-    //             platform,
-    //             buildData: buildData,
-    //             totalPrice,
-    //         });
-    //
-    //         setSavedRefreshKey((k) => k + 1);
-    //     } catch (e) {
-    //         const msg = e instanceof Error ? e.message : String(e);
-    //         setDataError(msg);
-    //     } finally {
-    //         setSavingBuild(false);
-    //     }
-    // }
-
 // Внутри BuilderPage
     async function onSaveBuild() {
         if (!isBuildComplete) return;
@@ -331,7 +302,6 @@ export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) 
                         </Button>
                     </div>
 
-                    <SavedBuildsList requiredCategories={CATEGORIES} refreshKey={savedRefreshKey} />
                 </section>
 
                 <PerformanceEstimatePanel

@@ -1,6 +1,7 @@
 import { getSupabaseClient } from "@/shared/lib/supabase/client/client";
-import type { Category, Platform } from "@/entities/part/model/types";
+import type { Platform } from "@/entities/part/model/types";
 import type { SavedBuildData, SavedBuildRow } from "@/entities/saved-build/model/types";
+import {Category} from "@/shared/types/build-part";
 
 type UpsertSavedBuildPayload = {
     id?: string;

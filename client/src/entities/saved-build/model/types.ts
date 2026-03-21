@@ -1,4 +1,5 @@
-import type { Category, Platform } from "@/entities/part/model/types";
+import type { Platform } from "@/entities/part/model/types";
+import {Category} from "@/shared/types/build-part";
 
 export type SavedBuildData = Partial<Record<Category, string>>;
 

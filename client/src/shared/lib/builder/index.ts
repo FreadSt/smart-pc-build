@@ -4,4 +4,4 @@ export {
     PLATFORM_SOCKETS,
 } from "@/entities/part/model/constants";
 
-export type { Category, Platform } from "@/entities/part/model/types";
+export type { Platform } from "@/entities/part/model/types";
