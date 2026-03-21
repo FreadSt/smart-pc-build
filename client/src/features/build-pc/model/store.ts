@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { PartRow, Category, Platform } from "@/entities/part/model/types";
+import { PartRow, Platform } from "@/entities/part/model/types";
 import { buildPc } from "../lib/buildPc";
 import { fetchParts } from "@/entities/part/api/fetchParts";
 import { PLATFORM_SOCKETS } from "@/entities/part/model/constants";
@@ -15,6 +15,7 @@ import {
     getSsdFormFactor,
     getSocket,
 } from "../lib/compatibility";
+import {Category} from "@/shared/types/build-part";
 
 type BuildState = Partial<Record<Category, PartRow | null>>;
 
