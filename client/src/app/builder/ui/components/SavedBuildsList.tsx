@@ -141,8 +141,9 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Button, Card } from "@/shared/ui";
 import { useBuildStore } from "@/features/build-pc/model/store";
-import type { Category, PartRow } from "@/entities/part/model/types";
+import type { PartRow } from "@/entities/part/model/types";
 import { localBuildsApi, LocalSavedBuild } from "@/entities/saved-build/api/savedBuilds";
+import {Category} from "@/shared/types/build-part";
 
 export function SavedBuildsList({
                                     requiredCategories,

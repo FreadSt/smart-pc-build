@@ -1,7 +1,8 @@
 import { Button, Modal } from "@/shared/ui";
-import { Category, PartRow } from "@/entities/part/model/types";
+import { PartRow } from "@/entities/part/model/types";
 import { CATEGORY_LABEL } from "@/entities/part/model/constants";
 import { money, normalizePrice } from "@/shared/lib/utils/price";
+import {Category} from "@/shared/types/build-part";
 
 type BudgetImpact = {
     nextTotal: number;

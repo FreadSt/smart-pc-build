@@ -6,7 +6,7 @@ import { BuilderSettingsPanel } from "./components/BuilderSettingsPanel";
 import { BuildCardsGrid } from "./components/BuildCardsGrid";
 import { PartPickerModal } from "./components/PartPickerModal";
 import { useBuildStore } from "@/features/build-pc/model/store";
-import { Category, PartRow, Platform } from "@/entities/part/model/types";
+import { PartRow, Platform } from "@/entities/part/model/types";
 import { PLATFORM_SOCKETS } from "@/entities/part/model/constants";
 import {
     getCoolerSockets,
@@ -28,6 +28,7 @@ import { SavedBuildsList } from "./components/SavedBuildsList";
 import {localBuildsApi, upsertSavedBuild} from "@/entities/saved-build/api/savedBuilds";
 import { Button } from "@/shared/ui";
 import { OnboardingModal } from "./components/OnboardingModal";
+import {Category} from "@/shared/types/build-part";
 
 const CATEGORIES: Category[] = ["CPU", "MOTHERBOARD", "GPU", "PSU", "CPU_COOLER", "CASE", "RAM", "SSD"];
 
@@ -347,7 +348,7 @@ export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) 
                 onSelectPart={handleSelectPart}
             />
 
-            <OnboardingModal />
+            {/*<OnboardingModal />*/}
         </div>
     );
 }

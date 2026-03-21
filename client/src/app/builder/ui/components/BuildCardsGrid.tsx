@@ -1,7 +1,10 @@
 import { Button, Card } from "@/shared/ui";
-import { Category, PartRow } from "@/entities/part/model/types";
+import { PartRow } from "@/entities/part/model/types";
 import { CATEGORY_LABEL } from "@/entities/part/model/constants";
 import { money, normalizePrice } from "@/shared/lib/utils/price";
+import {Category} from "@/shared/types/build-part";
+import {CARDS} from "@/shared/constants/build-part";
+import Image from "next/image";
 
 type BuildState = Partial<Record<Category, PartRow | null>>;
 
@@ -10,17 +13,6 @@ type Props = {
     partsByCategory: Record<Category, PartRow[]>;
     onChangeCategory: (cat: Category) => void;
 };
-
-const CARDS: { category: Category; allowAuto: boolean }[] = [
-    { category: "CPU", allowAuto: true },
-    { category: "MOTHERBOARD", allowAuto: true },
-    { category: "GPU", allowAuto: true },
-    { category: "PSU", allowAuto: true },
-    { category: "CPU_COOLER", allowAuto: false },
-    { category: "CASE", allowAuto: false },
-    { category: "RAM", allowAuto: true },
-    { category: "SSD", allowAuto: true },
-];
 
 export function BuildCardsGrid({ build, partsByCategory, onChangeCategory }: Props) {
 
@@ -39,8 +31,7 @@ export function BuildCardsGrid({ build, partsByCategory, onChangeCategory }: Pro
                         {part ? (
                             <div className="space-y-1">
                                 {part.image_url ? (
-                                    // Supabase stores images as top-level `image_url`
-                                    <img
+                                    <Image
                                         src={part.image_url}
                                         alt={part.name}
                                         className="h-16 w-full rounded-md object-cover"

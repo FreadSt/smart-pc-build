@@ -1,4 +1,5 @@
-import { Category, Platform } from "./types";
+import { Platform } from "./types";
+import {Category} from "@/shared/types/build-part";
 
 export const CATEGORY_LABEL: Record<Category, string> = {
     CPU: "CPU",

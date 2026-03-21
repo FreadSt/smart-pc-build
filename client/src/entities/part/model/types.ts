@@ -1,12 +1,4 @@
-export type Category =
-    | "CPU"
-    | "MOTHERBOARD"
-    | "GPU"
-    | "PSU"
-    | "CPU_COOLER"
-    | "CASE"
-    | "RAM"
-    | "SSD";
+import {Category} from "@/shared/types/build-part";
 
 export type Platform = "intel" | "amd" | "any";
 
