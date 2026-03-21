@@ -6,7 +6,8 @@ import { useParams } from "next/navigation";
 import { fetchParts } from "@/entities/part/api/fetchParts";
 import { getSavedBuildById } from "@/entities/saved-build/api/savedBuilds";
 import { useBuildStore } from "@/features/build-pc/model/store";
-import type { Category, Platform, PartRow } from "@/entities/part/model/types";
+import type { Platform, PartRow } from "@/entities/part/model/types";
+import {Category} from "@/shared/types/build-part";
 
 type BuildState = Partial<Record<Category, PartRow | null>>;
 
