@@ -24,16 +24,13 @@ import { money, normalizePrice } from "@/shared/lib/utils/price";
 import { AlertTriangle } from "lucide-react";
 import { BuilderTipsCarousel } from "./components/BuilderTipsCarousel";
 import { PerformanceEstimatePanel } from "./components/PerformanceEstimatePanel";
-import {localBuildsApi, upsertSavedBuild} from "@/entities/saved-build/api/savedBuilds";
-import { Button } from "@/shared/ui";
-import { OnboardingModal } from "./components/OnboardingModal";
 import {Category} from "@/shared/types/build-part";
 
 const CATEGORIES: Category[] = ["CPU", "MOTHERBOARD", "GPU", "PSU", "CPU_COOLER", "CASE", "RAM", "SSD"];
 
 type BuildState = Partial<Record<Category, PartRow | null>>;
 
-export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) {
+export function BuilderPage() {
     const {
         budget,
         platform,
@@ -48,8 +45,6 @@ export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) 
 
     const [activeCategory, setActiveCategory] = useState<Category | null>(null);
     const [dataError, setDataError] = useState<string | null>(null);
-    const [savedRefreshKey, setSavedRefreshKey] = useState(0);
-    const [savingBuild, setSavingBuild] = useState(false);
 
     const budgetTooLow = budget < 8000;
 
@@ -214,38 +209,6 @@ export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) 
         }
     }
 
-    const isBuildComplete = useMemo(() => {
-        return CATEGORIES.every((cat) => Boolean((build as BuildState)[cat]));
-    }, [build]);
-
-// Внутри BuilderPage
-    async function onSaveBuild() {
-        if (!isBuildComplete) return;
-
-        setSavingBuild(true);
-        try {
-            const buildData: Partial<Record<Category, string>> = {};
-            for (const cat of CATEGORIES) {
-                const part = (build as BuildState)[cat];
-                if (part) buildData[cat] = part.slug;
-            }
-
-            // Сохраняем локально
-            localBuildsApi.save({
-                budget,
-                platform: platform as Platform,
-                buildData,
-                totalPrice,
-            });
-
-            // Триггерим обновление списка
-            setSavedRefreshKey((k) => k + 1);
-        } catch (e) {
-            setDataError("Ошибка при сохранении");
-        } finally {
-            setSavingBuild(false);
-        }
-    }
 
     function handleSelectPart(cat: Category, part: PartRow) {
         selectPart(cat, part);
@@ -295,12 +258,6 @@ export function BuilderPage({ savedBuildId }: { savedBuildId?: string | null }) 
                         partsByCategory={partsByCategory}
                         onChangeCategory={setActiveCategory}
                     />
-
-                    <div className="flex items-center justify-between gap-3">
-                        <Button variant="primary" disabled={!isBuildComplete || savingBuild} onClick={() => void onSaveBuild()}>
-                            {savingBuild ? "Saving..." : "Save build"}
-                        </Button>
-                    </div>
 
                 </section>
 
